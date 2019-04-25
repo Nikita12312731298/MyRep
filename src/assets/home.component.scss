@@ -1,0 +1,172 @@
+$a-height: 60vh;
+
+// Position text along bottom
+$text-offset: 30vh;
+
+// Page Title
+h1 {
+  
+  text-align:center;
+  font-family:Montserrat,sans-serif;
+  color:#333;
+
+}
+
+.accordion {
+
+  width:100%;
+  overflow:hidden;
+  
+  .menu {
+
+    width:100%;
+    display:table;
+    table-layout:fixed;
+    margin:0;
+    padding:0;
+
+
+    .menu-link {
+      padding-left: 0px;
+      padding-right: 0px;
+      text-align: center;
+      display:table-cell;
+      vertical-align:middle;
+      position: relative;
+      width:25%; // 6 into 100
+      height:$a-height;
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-position:center center;
+      color:white;
+      transition:all 500ms ease;
+
+
+      div {
+        
+        display:block;
+        overflow:hidden;
+        width:100%;
+
+        a {
+          
+          display:block;
+          height:$a-height;
+          width:100%;
+          position:relative;
+          z-index:3;
+          vertical-align:middle;
+          box-sizing:border-box;
+          color:#fff;
+          text-decoration:none;
+          font-family:Open Sans, sans-serif;
+          transition:all 200ms ease;
+
+          * {
+
+            margin:0;
+            width:100%;
+            text-overflow:ellipsis;
+            position:relative;
+            z-index:5;
+            
+            white-space:nowrap;
+            overflow:hidden;
+            
+           
+
+            -webkit-transition:all 400ms ease;
+            transition:all 400ms ease;
+
+          }
+
+          h2 {
+            font-family:Montserrat,sans-serif;
+            text-overflow:clip;
+            font-size:24px;
+            text-transform:uppercase;
+            margin-bottom:2px;
+    
+            top:$text-offset;
+
+          }
+          
+          p {
+            opacity:0;
+            color :red;
+            top:$text-offset;
+            font-size:13.5px;
+            
+          }
+
+        }
+
+      }
+
+    }
+   
+    &:hover .menu-link,
+    //&:focus-within li { width:8%; }
+    
+    .menu-link:focus {
+      outline: none;
+    }
+
+    &:hover .menu-link:hover,
+    // allow users to tab through active slides
+    .menu-link:focus,
+    &:focus-within .menu-link:focus {
+
+      width:60%;
+
+      a {
+        
+        background:rgba(0,0,0,.4);
+        
+        * {
+          
+          opacity:1;
+          -webkit-transform:translateX(0);
+          transform:translateX(0);
+        
+        }
+      
+      }
+
+    }
+    
+    &:hover .menu-link {
+      //width: 8% !important;
+      
+      a * { opacity: 0 !important; }
+    }
+    
+    &:hover .menu-link:hover {
+      width:60% !important;
+
+      a {
+        
+        background:rgba(0,0,0,.4);
+        
+        * {
+          
+          opacity:1 !important;
+          -webkit-transform:translateX(0);
+          transform:translateX(0);
+        
+        }
+      
+      }
+    }
+
+  }
+
+}
+
+.fade {
+  @include transition($transition-fade);
+
+  &:not(.show) {
+    opacity: 1;
+  }
+}

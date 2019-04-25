@@ -1,0 +1,8 @@
+.fade{
+    opacity: 1;
+    background-color: rgba(1, 1, 1, 0.7);
+}
+
+.modal-dialog{
+    top:30%;
+}

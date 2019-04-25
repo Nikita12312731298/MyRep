@@ -1,0 +1,14 @@
+<div class="col-md-12 other-posts">
+    <div *ngFor="let post of posts; let first = first; "  [ngClass] = "{first:first}" (click)="getAllPost(post._id)"  href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <small>Опубликовано: {{post.date}}</small>
+      <div class="photo">
+       <img src={{post.photo}} alt=""> 
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+          <h1 class="mb-1 title">{{post.title}}</h1>
+          
+      </div>
+      <p class="mb-1">{{post.description}}</p>
+      <small>read more...</small>
+    </div>   
+  </div>

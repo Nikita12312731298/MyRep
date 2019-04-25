@@ -1,0 +1,99 @@
+<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+
+<div class="container-fluid home-bg">
+  <div class="overlay">
+    <div class="col-md-12 video-bnr"></div>
+    <div class="col-md-12 home-header">
+        Онлайн архив<br>Второй мировой войны
+      </div>
+    <video loop muted autoplay poster="" class="video-bg" style="width:100%">
+          <source src="assets/bg.mp4" type="video/mp4">
+    </video>
+  </div>
+</div> 
+
+
+
+<div class="container-fluid">
+    <header class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <button (click)="logout()" type="button" class="btn btn-link">
+                        Logout
+                      </button>
+                </li>
+                <li class="nav-item">
+                    <button #addPost type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                      Add
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Панель администратора</h3>
+    </header>
+
+  <main role="main">
+   
+    <app-show-post></app-show-post>
+    
+  </main>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="reg-text col-md-6 col-sm-6">
+        <div class="text">
+          <h1>Создание профиля</h1>
+          <h3> Вы можете зарегестрироваться<br>
+          Чтобы оставлять комментарии и добавлять фото.</h3>
+        </div>
+      </div>
+      <div *ngIf="condition; then thenBlock else elseBlock" class="registration text-center col-md-3 col-sm-3">
+        </div>  
+       <ng-template #thenBlock> <app-add-user></app-add-user> </ng-template>  
+       <ng-template #elseBlock> <app-login></app-login>> </ng-template> 
+
+    </div>
+  </div>
+
+<div class="container-fluid accordion">
+  <div class="row menu">
+    <div class="col-md-12 col-sm-12 menu-link" [ngStyle]="{'background-image': 'url(assets/mus.png)'} ">
+      <div>
+      <a href="#">
+        <h2>Музыка</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </a>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 menu-link" [ngStyle]="{'background-image': 'url(assets/album.png)'} ">
+      <div>
+        <a href="#">
+          <h2>Альбом</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+        </div>
+    </div>
+  </div>
+
+  <div class="row menu">
+    <div class="col-md-12 col-sm-12 menu-link" [ngStyle]="{'background-image': 'url(assets/video.png)'} ">
+      <div>
+        <a href="#">
+          <h2>Видео</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 menu-link" [ngStyle]="{'background-image': 'url(assets/orden.png)'} ">
+      <div>
+        <a href="#">
+          <h2>Награды</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+        </div>
+    </div> 
+  </div>
+</div>
+

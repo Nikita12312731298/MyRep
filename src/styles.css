@@ -1,0 +1,96 @@
+h1 {
+  text-align: center;
+  font-family: Montserrat,sans-serif;
+  color: #333; }
+
+.accordion {
+  width: 100%;
+  overflow: hidden; }
+  .accordion .menu {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+    float: left;
+    height: 60vh; }
+    .accordion .menu .menu-link {
+      padding-left: 0px;
+      padding-right: 0px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      width: 25%;
+      height: 60vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: white;
+      transition: all 500ms ease; }
+      .accordion .menu .menu-link div {
+        display: block;
+        overflow: hidden;
+        width: 100%; }
+        .accordion .menu .menu-link div a {
+          display: block;
+          height: 60vh;
+          width: 100%;
+          position: relative;
+          z-index: 3;
+          vertical-align: middle;
+          box-sizing: border-box;
+          color: #fff;
+          text-decoration: none;
+          font-family: Open Sans, sans-serif;
+          transition: all 200ms ease; }
+          .accordion .menu .menu-link div a * {
+            margin: 0;
+            width: 100%;
+            text-overflow: ellipsis;
+            position: relative;
+            z-index: 5;
+            white-space: nowrap;
+            overflow: hidden;
+            -webkit-transition: all 400ms ease;
+            transition: all 400ms ease; }
+          .accordion .menu .menu-link div a h2 {
+            font-family: Montserrat,sans-serif;
+            text-overflow: clip;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            top: 30vh; }
+          .accordion .menu .menu-link div a p {
+            opacity: 0;
+            color: red;
+            top: 30vh;
+            font-size: 13.5px; }
+    .accordion .menu:hover .menu-link,
+    .accordion .menu .menu-link:focus {
+      outline: none; }
+    .accordion .menu:hover .menu-link:hover,
+    .accordion .menu .menu-link:focus,
+    .accordion .menu:focus-within .menu-link:focus {
+      width: 60%; }
+      .accordion .menu:hover .menu-link:hover a,
+      .accordion .menu .menu-link:focus a,
+      .accordion .menu:focus-within .menu-link:focus a {
+        background: rgba(0, 0, 0, 0.4); }
+        .accordion .menu:hover .menu-link:hover a *,
+        .accordion .menu .menu-link:focus a *,
+        .accordion .menu:focus-within .menu-link:focus a * {
+          opacity: 1;
+          -webkit-transform: translateX(0);
+          transform: translateX(0); }
+
+    .accordion .menu:hover .menu-link:hover {
+      width: 60% !important; }
+      
+      .accordion .menu:hover .menu-link:hover a {
+        background: rgba(0, 0, 0, 0.4); }
+
+        .accordion .menu:hover .menu-link:hover a * {
+          opacity: 1;
+          -webkit-transform: translateX(0);
+          transform: translateX(0); }

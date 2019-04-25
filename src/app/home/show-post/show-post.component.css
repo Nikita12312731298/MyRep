@@ -1,0 +1,41 @@
+.first{
+    color:green;
+}
+
+.first-post img{
+    width:50%;
+    max-width: 250px;
+}
+
+.fade{
+    opacity: 1;
+    background-color: rgba(1, 1, 1, 0.7);
+}
+
+
+.first-post .description{
+    width: 50%;
+    float: right;
+    padding: 10px;
+}
+
+.controllers{
+    margin : 10px;
+}
+
+.controllers .next{
+    float:right;
+}
+
+.controllers .prev{
+    float:left;
+}
+
+.description{
+    height: 45px;
+    overflow: hidden;
+}
+
+.align-items-start{
+    display: flow-root;
+}
